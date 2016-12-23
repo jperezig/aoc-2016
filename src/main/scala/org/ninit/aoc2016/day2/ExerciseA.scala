@@ -12,6 +12,7 @@ object ExerciseA extends App {
       case Right => Position(Math.min(x + 1, Max), y)
       case Down => Position(x, Math.max(y - 1, Min))
       case Left => Position(Math.max(x - 1, Min), y)
+      case None => this
     }
 
     def toNumber: Int = (x, y) match {
